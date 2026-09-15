@@ -1,0 +1,78 @@
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center; 
+    padding: 20px;
+    background-color: #ab1b2c; 
+    color: white;
+}
+
+img {
+    width: 320px;
+    margin: 20px 0;
+    border-radius: 8px; /* Opsional: membuat sudut foto sedikit melengkung */
+}
+
+p.deskripsi {
+    max-width: 750px; 
+    margin: 0 auto;   
+    line-height: 1.6;
+}
+
+a.link-hijau {
+    color: #2ecc71; /* Hijau terang agar kontras di atas background */
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+
+a.link-hijau:hover {
+    color: #000000; /* Efek saat kursor diarahkan ke link */
+}
+
+/* Garis Pemisah */
+hr.divider {
+    border: none;
+    height: 2px;
+    background-color: #000000;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Pengaturan Tabel */
+table {
+    margin: 20px auto;         /* Berada tepat di tengah halaman */
+    border-collapse: collapse; /* Menggabungkan garis batas tabel */
+    width: 80%;
+    max-width: 450px;
+    text-align: left;
+}
+
+th, td {
+    border: 1px solid #ffffff; /* Garis tabel berwarna putih */
+    padding: 10px 14px;        /* Jarak di dalam sel tabel */
+}
+
+th {
+    background-color: #23990b; /* Latar header hijau */
+    text-align: center;
+}
+
+td.kolom-no {
+    text-align: center;
+    width: 50px;
+}
+
+/* Pengaturan Daftar Harapan */
+.harapan-box {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.harapan-box ul {
+    line-height: 1.8;
+}
+
+footer {
+    margin-top: 20px;
+}
