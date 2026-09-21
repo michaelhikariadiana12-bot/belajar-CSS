@@ -1,471 +1,476 @@
-
-* {
+/* =====================================
+   1. CSS RESET & DASAR
+   ===================================== */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
-/* =====================================
-   BODY
-   ===================================== */
-
-body {
-
-    font-family: "Times New Roman", Times, serif;
-
-    /* Background merah */
-    background-color: #ab1b2c;
-
-    color: #000000;
-
-    line-height: 1.6;
-
-    padding: 35px 20px;
+html {
+    scroll-behavior: smooth;
 }
 
-
-/* =====================================
-   KOTAK UTAMA
-   ===================================== */
-
-.container {
-
-    max-width: 1000px;
-
-    margin: auto;
-
-    background-color: #ffffff;
-
-    border: 5px solid #000000;
-
-    padding: 45px 40px;
-}
-
-
-/* =====================================
-   BAGIAN PROFIL
-   ===================================== */
-
-.profil {
-
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 55px;
-
-    margin-bottom: 45px;
-}
-
-
-/* =====================================
-   BAGIAN KIRI
-   ===================================== */
-
-.profil-kiri {
-
-    width: 42%;
-
-    text-align: center;
-}
-
-
-/* =====================================
-   FOTO
-   ===================================== */
-
-.foto-wrapper {
-
-    width: 270px;
-
-    height: 270px;
-
-    margin: 0 auto 20px;
-
-    border: 5px solid #000000;
-
-    border-radius: 50%;
-
-    overflow: hidden;
-
-    background-color: #ab1b2c;
-}
-
-
-/* =====================================
-   GAMBAR FOTO
-   ===================================== */
-
-.foto-wrapper img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
+img {
+    max-width: 100%;
     display: block;
 }
 
+/* =====================================
+   2. BODY DENGAN LINEAR GRADIENT
+   ===================================== */
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* Kombinasi Linear Gradient warna merah marun modern */
+    background: linear-gradient(135deg, #8a1321 0%, #ab1b2c 50%, #4a0912 100%);
+    background-attachment: fixed;
+    color: #2b2b2b;
+    line-height: 1.7;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
 
 /* =====================================
-   NAMA
+   3. KOTAK UTAMA (BOX-SHADOW & CARD)
    ===================================== */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 24px;
+    /* Box shadow berlapis elegan */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 55px 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* =====================================
+   4. BAGIAN PROFIL (FLEXBOX)
+   ===================================== */
+.profil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 35px;
+}
+
+.profil-kiri {
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* FOTO DENGAN LINEAR GRADIENT & TRANSFORM HOVER */
+.foto-wrapper {
+    width: 230px;
+    height: 230px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, #23990b, #ab1b2c);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    /* Transition untuk hover halus */
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.foto-wrapper:hover {
+    /* Transform scale & rotate halus */
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 18px 35px rgba(171, 27, 44, 0.35);
+}
+
+.foto-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #fff;
+}
 
 .profil-kiri h2 {
-
-    font-size: 29px;
-
-    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
 }
 
-
-/* =====================================
-   STATUS MAHASISWA
-   ===================================== */
-
-.profil-kiri p {
-
-    font-size: 18px;
+.sub-profil {
+    font-size: 15px;
+    color: #666666;
+    margin-top: 4px;
 }
 
-
-/* =====================================
-   BAGIAN KANAN
-   ===================================== */
+.badge-tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 14px;
+    background-color: #f3f4f6;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 20px;
+}
 
 .profil-kanan {
-
     flex: 1;
-
-    padding-top: 45px;
 }
 
-
-/* =====================================
-   JUDUL HALLO DUNIA
-   ===================================== */
-
-.profil-kanan h1 {
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: clamp(55px, 7vw, 80px);
-    font-weight: 400;
-    letter-spacing: -2px;
-    line-height: 1.1;
-
-    color: #222222;
-
-    margin-bottom: 20px;
-
+/* HEADLINE DENGAN HOVER & TRANSFORM */
+.headline {
+    font-size: clamp(38px, 5vw, 62px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+    color: #111827;
+    margin-bottom: 18px;
+    display: inline-block;
     cursor: pointer;
-
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.profil-kanan h1:hover {
+.headline:hover {
     color: #23990b;
-    transform: scale(1.03);
+    transform: translateX(8px);
 }
-
-/* =====================================
-   DESKRIPSI KANAN
-   ===================================== */
 
 .profil-kanan p {
-
-    font-size: 20px;
-
-    line-height: 1.35;
-
-    max-width: 450px;
-}
-
-
-/* =====================================
-   DESKRIPSI DIRI
-   ===================================== */
-
-.deskripsi-box {
-
-    max-width: 850px;
-
-    margin: 20px auto;
-
     font-size: 18px;
-
-    text-align: justify;
+    color: #4b5563;
+    line-height: 1.75;
 }
 
+/* =====================================
+   5. DESKRIPSI BOX
+   ===================================== */
+.deskripsi-box {
+    background-color: #fbfbfb;
+    border-left: 5px solid #23990b;
+    border-radius: 0 14px 14px 0;
+    padding: 22px 28px;
+    margin: 30px 0;
+    font-size: 16.5px;
+    color: #374151;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
 
 /* =====================================
-   GARIS PEMISAH
+   6. PEMISAH
    ===================================== */
-
 .divider {
-
-    border: none;
-
-    border-top: 3px solid #000000;
-
-    max-width: 850px;
-
-    margin: 40px auto;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+    margin: 45px 0;
 }
 
-
 /* =====================================
-   DAFTAR TEMAN
+   7. DAFTAR SAHABAT DENGAN CSS GRID
    ===================================== */
-
 .kontainer-daftar {
-
-    max-width: 700px;
-
-    margin: 30px auto;
+    margin: 35px 0;
 }
 
-
-/* =====================================
-   KETERANGAN TABEL
-   ===================================== */
+.section-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #111827;
+}
 
 .keterangan-tabel {
+    font-size: 15.5px;
+    color: #6b7280;
+    margin-bottom: 25px;
+}
 
-    font-size: 18px;
+/* Penerapan Grid Responsif Auto-Fit */
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
+}
 
+/* Kartu Sahabat dengan Transform & Box Shadow */
+.friend-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 18px;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+}
+
+.friend-card:hover {
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 14px 20px rgba(0, 0, 0, 0.09);
+    border-color: #23990b;
+}
+
+.card-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: #23990b;
+    background: #e8f5e9;
+    padding: 3px 8px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.friend-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* =====================================
+   8. SIRKEL SISI GELAP & TOMBOL GRADIENT
+   ===================================== */
+.sirkel-section {
+    text-align: center;
+    background: linear-gradient(135deg, #111827, #1f2937);
+    color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    margin: 40px 0;
+}
+
+.sirkel-sub {
+    font-size: 15px;
+    color: #9ca3af;
+}
+
+.sirkel-nama {
+    font-size: 34px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin: 6px 0 12px;
+}
+
+.sirkel-cta {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #d1d5db;
     margin-bottom: 20px;
 }
 
-
-/* =====================================
-   TABLE
-   ===================================== */
-
-table {
-
-    width: 100%;
-
-    border-collapse: collapse;
-}
-
-
-/* =====================================
-   CELL TABLE
-   ===================================== */
-
-th,
-td {
-
-    border: 2px solid #000000;
-
-    padding: 10px 14px;
-
-    font-size: 17px;
-}
-
-
-/* =====================================
-   HEADER TABLE
-   ===================================== */
-
-th {
-
-    background-color: #23990b;
-
-    color: #ffffff;
-
-    text-align: center;
-}
-
-
-/* =====================================
-   NOMOR
-   ===================================== */
-
-.kolom-no {
-
-    width: 70px;
-
-    text-align: center;
-}
-
-
-/* =====================================
-   HOVER TABLE
-   ===================================== */
-
-tbody tr:hover {
-
-    background-color: #eeeeee;
-}
-
-
-/* =====================================
-   SISI GELAP
-   ===================================== */
-
-.sirkel-section {
-
-    text-align: center;
-
-    margin-top: 40px;
-}
-
-
-.sirkel-section p {
-
-    font-size: 18px;
-}
-
-
-.sirkel-section h2 {
-
-    font-size: 22px;
-
-    margin: 20px 0 15px;
-}
-
-
-/* =====================================
-   LINK INSTAGRAM
-   ===================================== */
-
+/* Tombol dengan Linear Gradient & Transform Hover */
 .link-hijau {
-
     display: inline-block;
-
-    color: #23990b;
-
-    border: 2px solid #23990b;
-
-    padding: 8px 15px;
-
-    border-radius: 5px;
-
-    font-weight: bold;
-
+    padding: 13px 28px;
+    background: linear-gradient(135deg, #23990b, #1e7e0a);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
     text-decoration: none;
-
-    transition: 0.3s;
+    border-radius: 30px;
+    box-shadow: 0 8px 18px rgba(35, 153, 11, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
-
 
 .link-hijau:hover {
-
-    background-color: #23990b;
-
-    color: white;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 14px 25px rgba(35, 153, 11, 0.5);
+    filter: brightness(1.1);
 }
 
+.link-hijau:active {
+    transform: translateY(0);
+}
 
 /* =====================================
-   HARAPAN
+   9. HARAPAN (FLEXBOX ITEM)
    ===================================== */
-
 .harapan-section {
+    margin-top: 30px;
+}
 
+.harapan-judul {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #111827;
     text-align: center;
 }
 
-
-.harapan-judul {
-
-    font-size: 19px;
-
-    margin-bottom: 15px;
-}
-
-
-/* =====================================
-   BOX HARAPAN
-   ===================================== */
-
 .harapan-box {
-
-    display: inline-block;
-
-    text-align: left;
-
-    border: 2px solid #000000;
-
-    padding: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
-
-.harapan-box ul {
-
-    font-size: 18px;
+.harapan-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 14px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-
-.harapan-box li {
-
-    margin-bottom: 7px;
+.harapan-item:hover {
+    transform: translateX(6px);
+    border-color: #23990b;
+    background: #ffffff;
 }
 
+.check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color: #e8f5e9;
+    color: #23990b;
+    font-weight: bold;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.harapan-item p {
+    font-size: 15.5px;
+    font-weight: 500;
+    color: #374151;
+}
+/* =====================================
+   TOMBOL DAN NOTIFIKASI HARAPAN
+   ===================================== */
+.harapan-action {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Tombol dengan gradient, shadow & animasi hover */
+.btn-harapan {
+    background: linear-gradient(135deg, #23990b, #196f07);
+    color: #ffffff;
+    border: none;
+    padding: 13px 28px;
+    font-size: 15.5px;
+    font-weight: 700;
+    font-family: inherit;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(35, 153, 11, 0.3);
+    transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.25s ease, filter 0.25s ease, background 0.3s ease;
+}
+
+.btn-harapan:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 22px rgba(35, 153, 11, 0.45);
+    filter: brightness(1.08);
+}
+
+.btn-harapan:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Tampilan tombol saat sudah di-klik */
+.btn-harapan.sudah-klik {
+    background: linear-gradient(135deg, #111827, #374151);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Notifikasi ucapan terima kasih */
+.pesan-notif {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.95);
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    color: #1b5e20;
+    border: 1.5px solid #81c784;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), visibility 0.35s;
+}
+
+/* State saat notifikasi aktif */
+.pesan-notif.aktif {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
 
 /* =====================================
-   RESPONSIVE HP
+   10. RESPONSIVE DESIGN (MEDIA QUERY)
    ===================================== */
-
-@media (max-width: 700px) {
-
-    body {
-
-        padding: 10px;
-    }
-
-
+/* Tablet & Layar Menengah */
+@media (max-width: 850px) {
     .container {
-
-        padding: 30px 20px;
+        padding: 40px 30px;
     }
-
 
     .profil {
-
         flex-direction: column;
-
-        align-items: center;
-
-        gap: 25px;
+        text-align: center;
+        gap: 30px;
     }
-
 
     .profil-kiri {
-
+        flex: auto;
         width: 100%;
     }
 
-
     .profil-kanan {
-
-        width: 100%;
-
-        padding-top: 0;
-
         text-align: center;
     }
 
+    .friends-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
 
-    .profil-kanan h1 {
-
-        font-size: 45px;
+/* Ponsel / Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 15px 10px;
     }
 
-
-    .profil-kanan p {
-
-        margin: auto;
+    .container {
+        padding: 28px 18px;
+        border-radius: 16px;
     }
-
 
     .foto-wrapper {
-
-        width: 230px;
-
-        height: 230px;
+        width: 180px;
+        height: 180px;
     }
 
+    .headline {
+        font-size: 34px;
+    }
+
+    .friends-grid {
+        grid-template-columns: 1fr 1fr; /* 2 kolom di layar kecil */
+        gap: 12px;
+    }
+
+    .link-hijau {
+        width: 100%;
+        text-align: center;
+    }
 }
