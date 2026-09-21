@@ -3,228 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Website Pertama Minho</title>
-
+    <!-- Google Fonts untuk tipografi lebih modern & estetik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <main class="container">
 
         <!-- =========================
-             BAGIAN ATAS / PROFIL
+             BAGIAN ATAS / PROFIL (FLEXBOX)
              ========================= -->
         <section class="profil">
 
             <!-- FOTO DAN NAMA -->
             <div class="profil-kiri">
-
                 <div class="foto-wrapper">
+                    <!-- Ganti path gambar sesuai kebutuhan (gunakan relative path atau nama file lokal) -->
                     <img src="c:\Users\Lenovo\OneDrive\Pictures\minho.jpeg" alt="Foto Profil Minho">
                 </div>
-
                 <h2>Michael Hikari Adiana</h2>
-
-                <p>
-                    Mahasiswa Universitas Sanata Dharma
-                </p>
-
+                <p class="sub-profil">Mahasiswa Universitas Sanata Dharma</p>
+                <div class="badge-tag">Informatika '25</div>
             </div>
-
 
             <!-- JUDUL DAN DESKRIPSI -->
             <div class="profil-kanan">
-
-                <h1>Hallo Dunia!</h1>
-
+                <h1 class="headline">Hallo Dunia!</h1>
                 <p>
-                    Selamat datang di WEB Pertamaku!
-                    Dalam Web ini saya ingin berbagi cerita
-                    mengenai kisah hidup saya selama belajar
-                    satu tahun lebih di Universitas Sanata Dharma.
+                    Selamat datang di <b>WEB Pertamaku!</b> Di sini saya ingin berbagi cerita 
+                    mengenai perjalanan kuliah dan dinamika kehidupan kampus selama lebih 
+                    dari satu tahun di Universitas Sanata Dharma.
                 </p>
-
             </div>
 
         </section>
-
 
         <!-- =========================
              DESKRIPSI DIRI
              ========================= -->
         <section class="deskripsi-box">
-
             <p>
-                Nama saya adalah <b>Hikari</b> atau lebih akrab disapa <b>Minho</b>.
-                Saya merupakan mahasiswa prodi Informatika semester 3 di
-                Universitas Sanata Dharma. Terkadang sering ditanya mengapa
-                saya mengambil program studi ini.
-
-                Sebenarnya banyak faktor yang membuat saya tertarik mengambil
-                prodi ini: yang pertama yakni karena saya melihat prospek
-                lapangan kerja di bidang informatika sangat luas, yang kedua
-                saya tertarik untuk mempelajari hal-hal yang baru, dan yang
-                terakhir saya juga ingin membuat sebuah aplikasi game yang bisa
-                dimainkan oleh banyak orang.
+                Nama saya adalah <b>Hikari</b> atau lebih akrab disapa <b>Minho</b>. 
+                Saya merupakan mahasiswa prodi Informatika semester 3 di Universitas Sanata Dharma. 
+                Terkadang sering ditanya mengapa saya mengambil program studi ini.
             </p>
-
+            <p>
+                Sebenarnya banyak faktor yang membuat saya tertarik mengambil prodi ini: 
+                yang pertama yakni karena saya melihat prospek lapangan kerja di bidang informatika 
+                sangat luas, yang kedua saya tertarik untuk mempelajari hal-hal yang baru, dan yang 
+                terakhir saya berkeinginan menciptakan karya digital serta aplikasi game interaktif 
+                yang bermanfaat bagi banyak orang.
+            </p>
         </section>
-
 
         <hr class="divider">
 
-
         <!-- =========================
-             DAFTAR SAHABAT
+             DAFTAR SAHABAT (CSS GRID)
              ========================= -->
         <section class="kontainer-daftar">
+            <div class="section-header">
+                <h2>Daftar Sahabat Dekat</h2>
+                <p class="keterangan-tabel">
+                    Di kampus ini saya memiliki banyak teman, dan berikut beberapa kawan seperjuangan terbaik saya:
+                </p>
+            </div>
 
-            <p class="keterangan-tabel">
-                Di kampus ini saya juga memiliki banyak teman, namun di antara
-                mereka semua, saya memiliki sahabat yang dekat dengan saya,
-                diantaranya:
-            </p>
-
-
-            <table>
-
-                <thead>
-
-                    <tr>
-                        <th class="kolom-no">No</th>
-                        <th>Nama Sahabat</th>
-                    </tr>
-
-                </thead>
-
-
-                <tbody>
-
-                    <tr>
-                        <td class="kolom-no">1</td>
-                        <td>Brian ndut</td>
-                    </tr>
-
-                    <tr>
-                        <td class="kolom-no">2</td>
-                        <td>Novel</td>
-                    </tr>
-
-                    <tr>
-                        <td class="kolom-no">3</td>
-                        <td>Niel</td>
-                    </tr>
-
-                    <tr>
-                        <td class="kolom-no">4</td>
-                        <td>Ricky</td>
-                    </tr>
-
-                    <tr>
-                        <td class="kolom-no">5</td>
-                        <td>Pendow</td>
-                    </tr>
-
-                    <tr>
-                        <td class="kolom-no">6</td>
-                        <td>Joseph</td>
-                    </tr>
-
-                    <tr>
-                        <td class="kolom-no">7</td>
-                        <td>BIMMAAA</td>
-                    </tr>
-
-                    <tr>
-                        <td class="kolom-no">8</td>
-                        <td>Arkan</td>
-                    </tr>
-
-                    <tr>
-                        <td class="kolom-no">9</td>
-                        <td>Ardi orkay</td>
-                    </tr>
-
-                    <tr>
-                        <td class="kolom-no">10</td>
-                        <td>Bang Sat</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
+            <!-- Tampilan Grid Responsif -->
+            <div class="friends-grid">
+                <div class="friend-card">
+                    <span class="card-num">#01</span>
+                    <h3>Brian ndut</h3>
+                </div>
+                <div class="friend-card">
+                    <span class="card-num">#02</span>
+                    <h3>Novel</h3>
+                </div>
+                <div class="friend-card">
+                    <span class="card-num">#03</span>
+                    <h3>Niel</h3>
+                </div>
+                <div class="friend-card">
+                    <span class="card-num">#04</span>
+                    <h3>Ricky</h3>
+                </div>
+                <div class="friend-card">
+                    <span class="card-num">#05</span>
+                    <h3>Pendow</h3>
+                </div>
+                <div class="friend-card">
+                    <span class="card-num">#06</span>
+                    <h3>Joseph</h3>
+                </div>
+                <div class="friend-card">
+                    <span class="card-num">#07</span>
+                    <h3>BIMMAAA</h3>
+                </div>
+                <div class="friend-card">
+                    <span class="card-num">#08</span>
+                    <h3>Arkan</h3>
+                </div>
+                <div class="friend-card">
+                    <span class="card-num">#09</span>
+                    <h3>Ardi orkay</h3>
+                </div>
+                <div class="friend-card">
+                    <span class="card-num">#10</span>
+                    <h3>Bang Sat</h3>
+                </div>
+            </div>
         </section>
-
 
         <!-- =========================
              SISI GELAP
              ========================= -->
         <section class="sirkel-section">
-
-            <p>
-                Kami bahkan membuat sebuah sirkel bernama
-                <b>Sisi Gelap</b>
-            </p>
-
-            <h2>
-                CLICK LINK INI JIKA KAMU PENASARAN:
-            </h2>
-
-            <p>
-
-                <a
-                    href="https://www.instagram.com/sisigelapgank/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+            <p class="sirkel-sub">Kami bahkan membuat sebuah sirkel bernama</p>
+            <h2 class="sirkel-nama">Sisi Gelap</h2>
+            <p class="sirkel-cta">CLICK LINK DI BAWAH INI JIKA KAMU PENASARAN:</p>
+            <div class="link-wrapper">
+                <a 
+                    href="https://www.instagram.com/sisigelapgank/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
                     class="link-hijau"
                 >
-                    https://www.instagram.com/sisigelapgank/
+                    @sisigelapgank di Instagram ↗
                 </a>
-
-            </p>
-
+            </div>
         </section>
 
-
         <hr class="divider">
-
-
-        <!-- =========================
-             HARAPAN
+       <!-- =========================
+             HARAPAN (FLEXBOX LIST)
              ========================= -->
         <section class="harapan-section">
-
-            <p class="harapan-judul">
-                Harapan saya di semester ini adalah untuk:
-            </p>
-
-
+            <h2 class="harapan-judul">Harapan Saya di Semester Ini:</h2>
             <div class="harapan-box">
-
-                <ul>
-
-                    <li>
-                        Mendapatkan IPS yang bagus
-                    </li>
-
-                    <li>
-                        Bisa konsisten dalam menjaga kesehatan
-                    </li>
-
-                    <li>
-                        Menguasai setiap mata kuliah yang diberikan
-                    </li>
-
-                </ul>
-
+                <div class="harapan-item">
+                    <span class="check-icon">✓</span>
+                    <p>Mendapatkan Indeks Prestasi Semester (IPS) yang memuaskan</p>
+                </div>
+                <div class="harapan-item">
+                    <span class="check-icon">✓</span>
+                    <p>Konsisten menjaga pola hidup dan kebugaran fisik</p>
+                </div>
+                <div class="harapan-item">
+                    <span class="check-icon">✓</span>
+                    <p>Menguasai materi serta proyek praktikum tiap mata kuliah</p>
+                </div>
             </div>
 
+            <!-- Tombol Interaktif & Wadah Notifikasi -->
+            <div class="harapan-action">
+                <button type="button" id="btnDoa" class="btn-harapan">
+                    Aminnnnn / Doakan Harapan Ini ✨
+                </button>
+                <div id="pesanDoa" class="pesan-notif" aria-live="polite">
+                    Terimakasih sudah mendoakan! 🙏✨
+                </div>
+            </div>
         </section>
 
     </main>
+
+    <!-- JavaScript Interaktif -->
+    <script>
+        const btnDoa = document.getElementById('btnDoa');
+        const pesanDoa = document.getElementById('pesanDoa');
+
+        btnDoa.addEventListener('click', () => {
+            // Tampilkan pesan dengan animasi
+            pesanDoa.classList.add('aktif');
+
+            // Feedback visual pada tombol saat ditekan
+            btnDoa.textContent = "Sudah Didoakan! ❤️";
+            btnDoa.classList.add('sudah-klik');
+
+            // Pesan otomatis memudar setelah 4 detik
+            setTimeout(() => {
+                pesanDoa.classList.remove('aktif');
+                btnDoa.textContent = "Aamiin / Doakan Harapan Ini ✨";
+                btnDoa.classList.remove('sudah-klik');
+            }, 4000);
+        });
+    </script>
 
 </body>
 </html>
